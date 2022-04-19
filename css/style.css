@@ -113,19 +113,19 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
   }
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #27742e;
     color: white;
     padding: 8px 20px;
     border: none;
     cursor: pointer;
   }
   input[type=submit]:hover {
-    background-color: #207524;
+    background-color: #24b62c;
     border: black;
   }
   .container {
       width: 35%;
-    background-color: #D7EAE6;
+    background-color: #01B5D0;
     border: 2px dashed #5B8A9E;
     padding: 30px;
     margin: 0 auto;
