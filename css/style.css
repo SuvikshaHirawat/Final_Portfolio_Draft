@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap');
+body{
+	margin:1%;
+	padding:1%;
+    /* Font */
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+    font-size:150%;
+
+    /* background image */
+    background-image: url("../images/backgroundimg.jpg");
+    min-height: 400px;
+    background-color: lightblue;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+	font-size: 40px;
+	font-weight: bold;
+}
+nav li {
+    padding: 10px;
+    background-color: #82D1D2;
+    border: 3px solid #EA96F0;
+    border-radius: 10px;
+	  width:25%;
+	  display: inline-block;
+	  width: 22%;
+  }
+
+nav li a{
+    text-decoration: none;
+}
+
+a.skip{
+  background: white;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: left 1s ease-out;
+  z-index: 1;
+  /* Requirement 3 code here*/
+  position: absolute;
+  left: -500px;
+}
+.skip:focus{
+  left: 0px;
+  top: 20px;
+}
+
+.active{
+    background-color:lightgreen;
+    font-weight:bold;
+    border:2px dotted slategray;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img{
+    margin: 8px;
+    border: 4px dotted white;
+    height: 200px;
+    width:auto;
+    padding: 2px;
+    border-radius: 2px;
+
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+}
+
+/* image hover */
+img:hover{
+       transform: scale(1.2);
+}
+
+a:visited{color: black}
+
+p, h1, h2 {
+    padding: 20px;
+}
+
+/* MOBILE CHECKPOINT */
+
+/* animation */
+.animation{
+    animation: mymove 3s;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes mymove {
+        0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+  /* CONTACT FORM */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px dotted grey;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+    border: black;
+  }
+  .container {
+      width: 35%;
+    background-color: #D7EAE6;
+    border: 2px dashed #5B8A9E;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+/* FLEXBOX FOR EDITS */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px 175px ;
+}
+
+.gallery img{
+    border: none;
+    margin: 15px;
+    width: auto;
+}
+
+/* FLEXBOX FOR INDIA*/
+.galleryindia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+.card{
+    flex-basis: 450px;
+    padding: 20px 20px 20px 20px;
+}
+img{
+    width :350px;
+    height: 350px ;
+}
+
+/* FLEXBOX FOR VOLCANO*/
+.volcanosection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+.volcanosection img{
+    border: none;
+    margin: 15px;
+    width: auto;
+}
+footer, h1{
+    text-align: center;
+}
+.headshot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+p{
+    line-height: 25px;
+    text-align: center;
+}
+#volcano{
+    text-align: center;
+    padding: 35px;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+/* GRID FOR HOME*/
+.homegrid{
+    display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 30px;
+  padding: 20px 150px 20px 150px;
+  }
+
+.homegriditem{
+margin: 12px;
+background: whitesmoke;
+border-radius: 12px;
+padding: 25px 25px 25px 25px;
+
+grid-column: 1/ span 3;
+}
+
+/* FLEXBOX FOR NAV*/
+.navbar, .navbar_1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+
+.bonus, .flip-card{
+  visibility: hidden;
+}
+
+/* FOR TABLET ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media only screen and (min-width: 600px) {
+  .navbar{
+    display: flex;
+    flex-direction: column;
+}
+  .navbar_1{
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bonus, .flip-card{
+    visibility:visible;
+  }
+}
+
+/* FOR DESKTOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media only screen and (min-width: 900px) {
+
+.navbar, .navbar_1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.bonus, .flip-card{
+  visibility:visible;
+}
+}
+
+/* @media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+
+  a.skip {
+    -webkit-transition: initial;
+    transition: initial;
+  }
+  .intro{
+    background-attachment: initial;
+  }
+a.skip, .flip-card:hover, .flip-card-back, .flip-card-front{
+animation: none;
+transition: none;
+transform:none;
+-webkit-transition: none;
+
+} */
+
+/* FLIPCARD */
+  .flip-card {
+    width: 300px;
+    height: 480px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.0s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+/* TOOLTIP */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
